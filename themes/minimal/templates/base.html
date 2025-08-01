@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
+    <script src="{{ SITEURL }}/theme/js/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="{{ SITEURL }}/theme/js/mermaid-handler.js"></script>
+    <script src="{{ SITEURL }}/theme/js/code-copy.js"></script>
+</head>
+<body>
+    <button class="theme-switch" onclick="toggleTheme()"></button>
+    <header>
+        <h1><a href="/">{{ SITENAME }}</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <footer>
+        <p>&copy; {{ CURRENTYEAR }} {{ AUTHOR }}. Built with <a href="https://blog.getpelican.com/">Pelican</a>.</p>
+    </footer>
+</body>
+</html> 
